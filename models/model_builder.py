@@ -200,7 +200,7 @@ class XLNet(nn.Module):
 
             all_hidden_states.append(top_vec.to('cpu'))
         top_vec = sum(all_hidden_states)
-        # top_vec = top_vec.to('cuda')
+        top_vec = top_vec.to('cuda')
         return top_vec
 
 
